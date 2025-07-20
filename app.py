@@ -4,6 +4,7 @@ import yaml
 from yaml.loader import SafeLoader
 import streamlit_authenticator as stauth
 from pathlib import Path
+import base64
 
 
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
@@ -51,19 +52,33 @@ if authentication_status:
         # HTML iframe del dashboard de Power BI con centrado
         powerbi_iframe = """
         <div style="display: flex; justify-content: center; margin-top: 20px;">
-            <iframe title="Dashboard 2.1 con correcciones_1.863" 
-                    width="1140" 
-                    height="541.25" 
-                    src="https://app.powerbi.com/reportEmbed?reportId=da1838c3-b954-491b-a9e8-ff9f8e22a0f5&autoAuth=true&ctid=585a4d92-db1d-4bbb-b5ac-c5299e3894e3" 
-                    frameborder="0" 
-                    allowFullScreen="true">
+            <iframe title="UXAL CORP_2" 
+                width="1024" 
+                height="612" 
+                src="https://app.powerbi.com/view?r=eyJrIjoiYTNmOGQwMmUtYWVmYy00MjQ0LTliYWEtMzM5NGFhYzE5ZmUyIiwidCI6IjU4NWE0ZDkyLWRiMWQtNGJiYi1iNWFjLWM1Mjk5ZTM4OTRlMyIsImMiOjR9" 
+                frameborder="0" 
+                allowFullScreen="true">
             </iframe>
-        </div>
         """
         # Usar componentes para incrustar el iframe
         components.html(powerbi_iframe, height=650)
 
     render_powerbi_dashboard()
+
+    # --- Botón de descarga PDF (Opción 1) ---
+    pdf_path = Path(__file__).parent / "reporte_luxal.pdf"   # ajusta nombre o subcarpeta si usas otra
+    if pdf_path.exists():
+        with pdf_path.open("rb") as f:
+            pdf_bytes = f.read()
+        st.download_button(
+            label="📥 Descargar informe de Marketing PDF",
+            data=pdf_bytes,
+            file_name=pdf_path.name,
+            mime="application/pdf",
+            help="Descarga el reporte en formato PDF"
+        )
+    else:
+        st.warning(f"El archivo {pdf_path.name} no se encontró. Verifica la ruta.")
 
     # ---- HIDE STREAMLIT STYLE ----
     hide_st_style = """
