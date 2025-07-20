@@ -1,0 +1,18 @@
+credentials:
+  usernames:
+    luxal:
+      email: luxal
+      name: LUXAL
+      password: "$2b$12$B2pOAlEpju7DwEdLaK52Y.VW9Up4AcZ7Hy6f9XiLiXTdW5uuYsjV2"
+    utpl:
+      email: utpl
+      name: UTPL
+      password: "$2b$12$kUkxwHHDULzmr7nxdYEESeBMSzXlcgKuXPHfFYDz45opLQTWJKBGK"
+cookie:
+  expiry_days: 30
+  key: "clave_secreta_aleatoria"
+  name: "nombre_cookie_autenticacion"
+preauthorized:
+  emails:
+    - aeulloa2@gmail.com
+    - aeulloa3@gmail.com
