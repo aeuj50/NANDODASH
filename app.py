@@ -8,7 +8,7 @@ import base64
 
 
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
-st.set_page_config(page_title="Dashboard ALPISUR", page_icon=":bar_chart:", layout="wide")
+st.set_page_config(page_title="Dashboard CREDIFÁCIL", page_icon=":bar_chart:", layout="wide")
 
 
 # Definir la ruta al archivo de configuración
@@ -46,7 +46,7 @@ username = st.session_state.get('username')
 if authentication_status:
     authenticator.logout('Cerrar sesión', location='main')
     st.write(f'Bienvenido/a *{name}*')
-    st.title('Dashboard ALPISUR')
+    st.title('Dashboard CREDIFÁCIL')
     # Aquí puedes agregar el contenido principal de tu aplicación
     def render_powerbi_dashboard():
         # HTML iframe del dashboard de Power BI con centrado
@@ -66,7 +66,7 @@ if authentication_status:
     render_powerbi_dashboard()
 
     # --- Botón de descarga PDF (Opción 1) ---
-    pdf_path = Path(__file__).parent / "reporte_alpisur.pdf"   # ajusta nombre o subcarpeta si usas otra
+    pdf_path = Path(__file__).parent / "reporte_credifacil.pdf"   # ajusta nombre o subcarpeta si usas otra
     if pdf_path.exists():
         with pdf_path.open("rb") as f:
             pdf_bytes = f.read()
