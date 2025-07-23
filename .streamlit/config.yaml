@@ -1,13 +1,13 @@
 credentials:
   usernames:
-    credifacil:
-      email: credifacil
-      name: CREDIFACIL
-      password: "$2b$12$HZcffrqirWOr1L/HA7RkxOifAzlb3lXW1WOZILO6HLt2sM8XD6knK"
+    faisan:
+      email: faisan
+      name: FAISAN
+      password: "$2b$12$SkANOZu/khoM782LDCvQ3.kK5OCGZoLlwP6yIlTWvzW/MCZprbkRG"
     utpl:
       email: utpl
       name: UTPL
-      password: "$2b$12$x4pzZvBNEQNGVyG.Q2nn9evR9myC0e2aKicPpIMpSERnzccpqng7W"
+      password: "$2b$12$PMcAXcacGzkg9Nb4zQih4.j1NFMQ5x8HWxN2DYDIdh4F6fJKEjSc."
 cookie:
   expiry_days: 30
   key: "clave_secreta_aleatoria"
