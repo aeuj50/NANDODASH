@@ -1,13 +1,13 @@
 credentials:
   usernames:
-    faisan:
-      email: faisan
-      name: FAISAN
-      password: "$2b$12$SkANOZu/khoM782LDCvQ3.kK5OCGZoLlwP6yIlTWvzW/MCZprbkRG"
+    nando:
+      email: nando
+      name: NANDO
+      password: "$2b$12$XzqfAV49IpijHPPOi7L41O9uvwsyA.zHTZtmEudhR8g.VNO8YZtu6"
     utpl:
       email: utpl
       name: UTPL
-      password: "$2b$12$PMcAXcacGzkg9Nb4zQih4.j1NFMQ5x8HWxN2DYDIdh4F6fJKEjSc."
+      password: "$2b$12$yA8nZfcxyMLmT6ctRLqMBes3OyWWnMJsO5rE4gEy3oIR8JGZHarjC"
 cookie:
   expiry_days: 30
   key: "clave_secreta_aleatoria"
